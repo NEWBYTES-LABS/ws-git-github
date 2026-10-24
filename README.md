@@ -53,3 +53,9 @@ src/
 ## Randomness And Behavior
 
 Random values use `crypto.getRandomValues()` with rejection sampling to avoid biased ranges. Raffle entries are trimmed line by line, blank lines are ignored, and duplicate entries count as separate chances.
+
+Number limits must be safe integers between -9007199254740991 and 9007199254740991. A range can contain at most 4,294,967,296 values (inclusive); larger ranges are rejected because the random generator uses 32-bit samples.
+
+## Languages
+
+The interface is available in English and Spanish. It follows the browser language on first visit (Spanish browsers start in Spanish; all others start in English), and the language selector saves your choice for future visits.
