@@ -43,6 +43,8 @@ a, button { -webkit-tap-highlight-color: transparent; }
 .brand-link:hover .brand-mark { transform: rotate(-12deg); }
 .menu-link { color: rgba(255, 255, 255, .7); border: 1px solid rgba(255, 255, 255, .15); border-radius: 999px; padding: 9px 16px; text-decoration: none; font-size: .875rem; font-weight: 700; }
 .menu-link:hover { color: #fff; border-color: rgba(255, 255, 255, .35); }
+.locale-select { max-width: 112px; min-height: 40px; padding: 7px 28px 7px 12px; border: 1px solid rgba(255, 255, 255, .15); border-radius: 999px; background-color: var(--ink); color: var(--paper); font-size: .875rem; font-weight: 700; }
+.locale-select:focus-visible { outline-color: var(--yellow); }
 
 .eyebrow { margin-bottom: 12px; font-size: .875rem; font-weight: 700; }
 .page-heading { margin: 0; color: var(--paper); font-size: clamp(3rem, 8vw, 4.5rem); line-height: .95; letter-spacing: -.07em; font-weight: 700; }
