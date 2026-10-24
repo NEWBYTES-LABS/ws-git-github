@@ -1,36 +1,36 @@
 ---
-name: Bug report
-about: Report a reproducible problem with the app
-title: "[Bug]: "
+name: Informe de error
+about: Informa de un problema reproducible de la aplicación
+title: "[Error]: "
 labels: bug
 assignees: ""
 ---
 
-## Description
+## Descripción
 
-Describe what went wrong.
+Describe qué ha ocurrido.
 
-## Steps to reproduce
+## Pasos para reproducirlo
 
-1. Go to `...`
-2. Enter `...`
-3. Select `...`
-4. Observe `...`
+1. Ve a `...`
+2. Introduce `...`
+3. Selecciona `...`
+4. Observa `...`
 
-## Expected behavior
+## Comportamiento esperado
 
-Describe what you expected to happen.
+Describe qué esperabas que ocurriera.
 
-## Actual behavior
+## Comportamiento actual
 
-Describe what happened instead.
+Describe qué ha ocurrido en su lugar.
 
-## Environment
+## Entorno
 
-- Browser and version:
-- Operating system:
-- Route or feature:
+- Navegador y versión:
+- Sistema operativo:
+- Ruta o funcionalidad:
 
-## Additional context
+## Contexto adicional
 
-Add screenshots, console errors, or other context that may help investigate the issue.
+Añade capturas, errores de consola u otro contexto que pueda ayudar a investigar el problema.

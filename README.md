@@ -1,42 +1,42 @@
-# Pura Suerte App
+# Aplicación Pura Suerte
 
-Pura Suerte is a small browser app for quick decisions:
+Pura Suerte es una pequeña aplicación web para tomar decisiones rápidas:
 
-- **Toss a coin**: Flip a virtual coin and get Heads or Tails.
-- **Random number**: Generate an inclusive integer between two limits.
-- **Raffle**: Enter one name or item per line and randomly select a winner.
+- **Lanzar una moneda**: Lanza una moneda virtual y obtén cara o cruz.
+- **Número aleatorio**: Genera un número entero entre dos límites, incluidos.
+- **Sorteo**: Introduce un nombre o elemento por línea y elige un ganador al azar.
 
-## Technology
+## Tecnología
 
-The app is a plain static website built with:
+La aplicación es un sitio web estático creado con:
 
 - HTML
 - CSS
 - jQuery
 - Bootstrap CSS and JavaScript
 - Bootstrap Icons
-- The browser Web Crypto API for random values
+- La API Web Crypto del navegador para generar valores aleatorios
 
-There is no Node.js, npm, build step, backend, or package installation required.
+No requiere Node.js, npm, compilación, backend ni instalación de paquetes.
 
-## Run The App
+## Ejecutar la aplicación
 
-Open `src/index.html` directly in a browser, or serve the `src/` folder from any static web host.
+Abre `src/index.html` directamente en un navegador o sirve la carpeta `src/` desde cualquier servidor web estático.
 
-The page loads Bootstrap, jQuery, and web fonts from CDNs, so an internet connection is required unless those resources are later downloaded and vendored locally.
+La página carga Bootstrap, jQuery y fuentes web desde CDN, por lo que necesita conexión a internet salvo que esos recursos se descarguen y se incluyan localmente.
 
-## Routes
+## Rutas
 
 The app uses hash routes so it works from a local file and from a basic static host:
 
-| Route | Purpose |
+| Ruta | Propósito |
 | --- | --- |
-| `#/` | Main menu |
-| `#/coin` | Coin toss |
-| `#/number` | Random number generator |
-| `#/raffle` | Raffle winner picker |
+| `#/` | Menú principal |
+| `#/coin` | Lanzamiento de moneda |
+| `#/number` | Generador de números aleatorios |
+| `#/raffle` | Selector de ganador para sorteos |
 
-## Project Structure
+## Estructura del proyecto
 
 ```text
 src/
@@ -50,6 +50,6 @@ src/
   PULL_REQUEST_TEMPLATE.md
 ```
 
-## Randomness And Behavior
+## Aleatoriedad y comportamiento
 
-Random values use `crypto.getRandomValues()` with rejection sampling to avoid biased ranges. Raffle entries are trimmed line by line, blank lines are ignored, and duplicate entries count as separate chances.
+Los valores aleatorios usan `crypto.getRandomValues()` con muestreo por rechazo para evitar rangos sesgados. Las entradas del sorteo eliminan espacios al principio y al final de cada línea, ignoran las líneas vacías y cuentan las entradas duplicadas como oportunidades independientes.
