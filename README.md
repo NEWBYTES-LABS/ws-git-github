@@ -17,6 +17,8 @@ The app is a plain static website built with:
 - Bootstrap Icons
 - The browser Web Crypto API for random values
 
+The interface is available in English and Spanish. It follows the browser language on first visit and remembers a language selected in the header.
+
 There is no Node.js, npm, build step, backend, or package installation required.
 
 ## Run The App
