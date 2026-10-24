@@ -86,9 +86,10 @@ textarea.form-control { min-height: 196px; line-height: 1.75; }
 .coin-perspective { perspective: 800px; }
 .coin { position: relative; width: 176px; height: 176px; transform-style: preserve-3d; }
 .coin.is-flipping { animation: coin-flip 900ms cubic-bezier(.2, .75, .25, 1); }
+.coin.is-showing-tail { transform: rotateY(180deg); }
 .coin-face { position: absolute; inset: 0; display: grid; place-items: center; border: 8px solid var(--yellow-deep); border-radius: 50%; background: var(--yellow); color: var(--ink); box-shadow: inset 0 -8px 0 var(--yellow-deep), 0 18px 30px rgba(0, 0, 0, .25); backface-visibility: hidden; }
 .coin-face-inner { display: grid; place-items: center; width: 96px; height: 96px; border: 2px solid rgba(18, 21, 29, .25); border-radius: 50%; }
-.coin-letter { font-family: 'Space Grotesk', sans-serif; font-size: 3rem; font-weight: 700; }
+.coin-letter { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 700; }
 .coin-tail { transform: rotateY(180deg); }
 
 .bottom-nav { position: fixed; right: 0; bottom: 0; left: 0; z-index: 10; padding: 0 16px max(16px, env(safe-area-inset-bottom)); }

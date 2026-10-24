@@ -1,25 +1,25 @@
-## Summary
+## Resumen
 
-Describe what this pull request changes and why.
+Describe qué cambia esta solicitud de incorporación y por qué.
 
-## Related issue
+## Incidencia relacionada
 
 Closes #
 
-## Changes
+## Cambios
 
 -
 
-## Validation
+## Validación
 
-- [ ] Opened `src/index.html` or served `src/` locally
-- [ ] Tested the affected route or feature
-- [ ] Tested the change in a supported browser
-- [ ] Checked the browser console for errors
-- [ ] Updated documentation when needed
+- [ ] Abrí `src/index.html` o serví `src/` localmente
+- [ ] Probé la ruta o funcionalidad afectada
+- [ ] Probé el cambio en un navegador compatible
+- [ ] Revisé la consola del navegador en busca de errores
+- [ ] Actualicé la documentación cuando era necesario
 
-## Checklist
+## Lista de comprobación
 
-- [ ] The change is focused and does not include unrelated formatting or refactoring
-- [ ] User-facing text and behavior are clear
-- [ ] Accessibility and responsive behavior were considered
+- [ ] El cambio está centrado y no incluye formato ni refactorización no relacionada
+- [ ] El texto y el comportamiento visibles para el usuario son claros
+- [ ] Se tuvieron en cuenta la accesibilidad y el comportamiento adaptable
