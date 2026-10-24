@@ -2,23 +2,23 @@
   'use strict';
 
   var routes = {
-    '/': { label: 'Choose a luck tool', nav: 'Home' },
-    '/coin': { label: 'Toss a coin', nav: 'Coin' },
-    '/number': { label: 'Random number', nav: 'Number' },
-    '/raffle': { label: 'Raffle', nav: 'Raffle' }
+    '/': { label: 'Elige una herramienta', nav: 'Inicio' },
+    '/coin': { label: 'Lanza una moneda', nav: 'Moneda' },
+    '/number': { label: 'Número aleatorio', nav: 'Número' },
+    '/raffle': { label: 'Sorteo', nav: 'Sorteo' }
   };
 
   var navItems = [
-    { route: '/', label: 'Home', icon: 'bi-house-fill' },
-    { route: '/coin', label: 'Coin', icon: 'bi-circle-fill' },
-    { route: '/number', label: 'Number', icon: 'bi-dice-5-fill' },
-    { route: '/raffle', label: 'Raffle', icon: 'bi-trophy-fill' }
+    { route: '/', label: 'Inicio', icon: 'bi-house-fill' },
+    { route: '/coin', label: 'Moneda', icon: 'bi-circle-fill' },
+    { route: '/number', label: 'Número', icon: 'bi-dice-5-fill' },
+    { route: '/raffle', label: 'Sorteo', icon: 'bi-trophy-fill' }
   ];
 
   var toolItems = [
-    { route: '/coin', title: 'Toss a coin', description: 'Let chance make the call.', icon: 'bi-circle-fill', tone: 'tone-yellow', number: '01' },
-    { route: '/number', title: 'Random number', description: 'Pick a number in your range.', icon: 'bi-dice-5-fill', tone: 'tone-coral', number: '02' },
-    { route: '/raffle', title: 'Raffle', description: 'Give every name a fair shot.', icon: 'bi-trophy-fill', tone: 'tone-mint', number: '03' }
+    { route: '/coin', title: 'Lanza una moneda', description: 'Deja que el azar decida.', icon: 'bi-circle-fill', tone: 'tone-yellow', number: '01' },
+    { route: '/number', title: 'Número aleatorio', description: 'Elige un número dentro de un intervalo.', icon: 'bi-dice-5-fill', tone: 'tone-coral', number: '02' },
+    { route: '/raffle', title: 'Sorteo', description: 'Todos los nombres tienen la misma oportunidad.', icon: 'bi-trophy-fill', tone: 'tone-mint', number: '03' }
   ];
 
   function escapeHtml(value) {
@@ -49,7 +49,7 @@
   }
 
   function renderHeader(route) {
-    var backLink = route !== '/' ? '<a class="menu-link d-inline-flex align-items-center gap-2" href="#/"><i class="bi bi-arrow-left" aria-hidden="true"></i>Menu</a>' : '';
+    var backLink = route !== '/' ? '<a class="menu-link d-inline-flex align-items-center gap-2" href="#/"><i class="bi bi-arrow-left" aria-hidden="true"></i>Menú</a>' : '';
     $('#site-header').html(
       '<div class="d-flex align-items-center justify-content-between gap-3">' +
         '<a class="brand-link d-inline-flex align-items-center gap-3" href="#/">' +
@@ -107,14 +107,14 @@
 
     return '<div>' +
       '<section class="mb-5">' +
-        '<p class="eyebrow text-yellow">A little help from the universe</p>' +
-        '<h1 class="page-heading">Make your own luck.</h1>' +
-        '<p class="page-description">Three tiny tools for the moments when you want a nudge, a number, or a name.</p>' +
+        '<p class="eyebrow text-yellow">Un pequeño empujón del universo</p>' +
+        '<h1 class="page-heading">Decide con un poco de suerte.</h1>' +
+        '<p class="page-description">Tres herramientas para cuando necesitas un empujón, un número o elegir un nombre.</p>' +
       '</section>' +
       '<section aria-labelledby="tools-heading">' +
         '<div class="d-flex align-items-end justify-content-between gap-3 mb-3">' +
-          '<h2 id="tools-heading" class="h2 font-display fw-bold mb-0">Pick your tool</h2>' +
-          '<span class="d-none d-sm-block text-white-50 small">Choose your kind of chance</span>' +
+          '<h2 id="tools-heading" class="h2 font-display fw-bold mb-0">Elige una herramienta</h2>' +
+          '<span class="d-none d-sm-block text-white-50 small">Elige tu tipo de azar</span>' +
         '</div>' +
         '<div class="row g-3">' + cards.split('</a>').filter(Boolean).map(function (card) { return '<div class="col-md-4">' + card + '</a></div>'; }).join('') + '</div>' +
       '</section>' +
@@ -123,13 +123,13 @@
 
   function renderCoin() {
     return '<div>' +
-      pageIntro('bi-circle-fill', 'tone-yellow', 'Toss a coin', 'Heads or tails?', 'Take the decision out of your hands for a second.') +
+      pageIntro('bi-circle-fill', 'tone-yellow', 'Lanza una moneda', '¿Cara o cruz?', 'Deja que el azar decida por un momento.') +
       '<section class="tool-panel coin-stage mb-4">' +
         '<div class="coin-perspective"><div id="coin" class="coin">' +
-          '<div class="coin-face"><div class="coin-face-inner"><span class="coin-letter">H</span></div></div>' +
-          '<div class="coin-face coin-tail"><div class="coin-face-inner"><span class="coin-letter">T</span></div></div>' +
+          '<div class="coin-face"><div class="coin-face-inner"><span class="coin-letter">C</span></div></div>' +
+          '<div class="coin-face coin-tail"><div class="coin-face-inner"><span class="coin-letter">X</span></div></div>' +
         '</div></div>' +
-        '<button id="flip-button" type="button" class="action-button btn-light w-100" style="max-width: 320px">Flip the coin</button>' +
+        '<button id="flip-button" type="button" class="action-button btn-light w-100" style="max-width: 320px">Lanzar moneda</button>' +
       '</section>' +
       '<div id="coin-result"></div>' +
     '</div>';
@@ -137,14 +137,14 @@
 
   function renderNumber() {
     return '<div>' +
-      pageIntro('bi-dice-5-fill', 'tone-coral', 'Random number', 'Name your range.', 'Set the edges. We will find the number hiding between them.') +
+      pageIntro('bi-dice-5-fill', 'tone-coral', 'Número aleatorio', 'Indica el intervalo.', 'Elige los límites y encontraremos un número entre ellos.') +
       '<section class="tool-panel mb-4">' +
         '<div class="row g-3 mb-4">' +
-          '<div class="col-sm-6"><label class="form-label" for="minimum">Min</label><input id="minimum" class="form-control mt-2" type="number" inputmode="numeric" value="1"></div>' +
-          '<div class="col-sm-6"><label class="form-label" for="maximum">Max</label><input id="maximum" class="form-control mt-2" type="number" inputmode="numeric" value="100"></div>' +
+          '<div class="col-sm-6"><label class="form-label" for="minimum">Mínimo</label><input id="minimum" class="form-control mt-2" type="number" inputmode="numeric" value="1"></div>' +
+          '<div class="col-sm-6"><label class="form-label" for="maximum">Máximo</label><input id="maximum" class="form-control mt-2" type="number" inputmode="numeric" value="100"></div>' +
         '</div>' +
         '<p id="number-error" class="mb-3 text-coral fw-bold small" role="alert"></p>' +
-        '<button id="number-button" type="button" class="action-button tone-coral w-100">Generate a number</button>' +
+        '<button id="number-button" type="button" class="action-button tone-coral w-100">Generar número</button>' +
       '</section>' +
       '<div id="number-result"></div>' +
     '</div>';
@@ -152,12 +152,12 @@
 
   function renderRaffle() {
     return '<div>' +
-      pageIntro('bi-trophy-fill', 'tone-mint', 'Raffle', 'Who gets the good news?', 'Add one name per line. Every line gets one fair shot.') +
+      pageIntro('bi-trophy-fill', 'tone-mint', 'Sorteo', '¿Quién recibe la buena noticia?', 'Añade un nombre por línea. Cada línea tiene la misma oportunidad.') +
       '<section class="tool-panel mb-4">' +
-        '<label class="form-label d-block" for="entries">Names or entries</label>' +
-        '<textarea id="entries" class="form-control mt-2" rows="7" placeholder="Maya&#10;Luis&#10;Sam"></textarea>' +
-        '<div class="d-flex align-items-center justify-content-between gap-3 mt-3 text-white-50 small"><span id="entry-count">0 entries ready</span><span id="duplicate-note"></span></div>' +
-        '<button id="raffle-button" type="button" class="action-button tone-mint w-100 mt-4" disabled>Pick a winner</button>' +
+        '<label class="form-label d-block" for="entries">Nombres o participantes</label>' +
+        '<textarea id="entries" class="form-control mt-2" rows="7" placeholder="Ana&#10;Luis&#10;Sam"></textarea>' +
+        '<div class="d-flex align-items-center justify-content-between gap-3 mt-3 text-white-50 small"><span id="entry-count">0 participantes listos</span><span id="duplicate-note"></span></div>' +
+        '<button id="raffle-button" type="button" class="action-button tone-mint w-100 mt-4" disabled>Elegir persona ganadora</button>' +
       '</section>' +
       '<div id="raffle-result"></div>' +
     '</div>';
@@ -173,12 +173,12 @@
       if (flipping) return;
       flipping = true;
       $('#coin').addClass('is-flipping');
-      $('#flip-button').prop('disabled', true).text('In the air...');
+      $('#flip-button').prop('disabled', true).text('¡En el aire!');
       window.setTimeout(function () {
-        var result = randomInteger(0, 1) === 0 ? 'Heads' : 'Tails';
-        $('#coin-result').html(resultPanel('The call is', result, 'tone-yellow'));
+        var result = randomInteger(0, 1) === 0 ? 'Cara' : 'Cruz';
+        $('#coin-result').html(resultPanel('Ha salido', result, 'tone-yellow'));
         $('#coin').removeClass('is-flipping');
-        $('#flip-button').prop('disabled', false).text('Flip the coin');
+        $('#flip-button').prop('disabled', false).text('Lanzar moneda');
         flipping = false;
       }, 900);
     });
@@ -189,23 +189,23 @@
       var minimum = Number($('#minimum').val());
       var maximum = Number($('#maximum').val());
       var error = '';
-      if (!Number.isInteger(minimum) || !Number.isInteger(maximum)) error = 'Use whole numbers for both limits.';
-      if (!error && minimum > maximum) error = 'Your minimum must be less than or equal to your maximum.';
+      if (!Number.isInteger(minimum) || !Number.isInteger(maximum)) error = 'Introduce números enteros en ambos límites.';
+      if (!error && minimum > maximum) error = 'El mínimo debe ser menor o igual que el máximo.';
       $('#number-error').text(error);
       if (error) {
         $('#number-result').empty();
         return;
       }
-      $('#number-result').html(resultPanel('Your number', randomInteger(minimum, maximum), 'tone-coral'));
+      $('#number-result').html(resultPanel('Tu número', randomInteger(minimum, maximum), 'tone-coral'));
     });
   }
 
   function bindRaffle() {
     function updateEntries() {
       var entries = parseEntries($('#entries').val());
-      var countLabel = entries.length + ' ' + (entries.length === 1 ? 'entry' : 'entries') + ' ready';
+      var countLabel = entries.length + (entries.length === 1 ? ' participante listo' : ' participantes listos');
       $('#entry-count').text(countLabel);
-      $('#duplicate-note').text(entries.length ? 'Duplicates count separately' : '');
+      $('#duplicate-note').text(entries.length ? 'Los nombres repetidos cuentan por separado' : '');
       $('#raffle-button').prop('disabled', entries.length === 0);
       return entries;
     }
@@ -213,7 +213,7 @@
     $('#raffle-button').on('click', function () {
       var entries = updateEntries();
       if (!entries.length) return;
-      $('#raffle-result').html(resultPanel('The winner is', entries[randomInteger(0, entries.length - 1)], 'tone-mint'));
+      $('#raffle-result').html(resultPanel('La persona ganadora es', entries[randomInteger(0, entries.length - 1)], 'tone-mint'));
     });
   }
 
